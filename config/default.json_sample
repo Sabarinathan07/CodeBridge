@@ -1,0 +1,5 @@
+{
+    "MONGO_URI":"<your_mongoDB_uri>",
+    "JWT_TOKEN" : "secret_key",
+    "githubToken":"<yoursecrectaccesstoken>"
+}
