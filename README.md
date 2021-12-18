@@ -5,7 +5,7 @@
 ### Clone App
 
 ``` 
-git clone https://github.com/Sabarinathan07/BLOG-MERN
+git clone https://github.com/Sabarinathan07/HackNode.git
 ```
 
 
