@@ -112,7 +112,7 @@ const AddEducation = ({ addEducation, history }) => {
 						<input
 							type='text'
 						name='description'
-						placeholder='Program Description'
+						placeholder='Education Description'
 						value={description}
 						onChange={(e) => onChange(e)}
 					/>

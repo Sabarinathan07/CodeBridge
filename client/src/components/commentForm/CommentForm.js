@@ -21,9 +21,9 @@ const CommentForm = ({ postId, addComment }) => {
 			>
 				<textarea
 					name='text'
-					cols='30'
+					cols='100'
 					rows='5'
-					placeholder='Create a post'
+					placeholder=' Comment here... '
 					value={text}
 					onChange={(e) => setText(e.target.value)}
 					required

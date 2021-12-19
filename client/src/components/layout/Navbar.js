@@ -47,7 +47,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 		<nav className='navbar bg-dark'>
 			<h1>
 				<Link to='/' className="navbar-logo">
-					<i className='fas fa-code'></i> HackNode
+					<i className='fas fa-code'></i>&nbsp;HackNode
 				</Link>
 			</h1>
 
