@@ -24,4 +24,34 @@
     border: 2px solid var(--primary);
     /* transition: all 0.3s ease-out; */
   }
+
+  @media (max-width: 700px) {
+
+
+    .button-box{
+      text-align: center;
+		justify-content: center;
+		padding: 4px 16px;
+		font-size: 14px;
+    /* margin-bottom: 2px; */
+    background-color: transparent;
+    border-radius: 0px;
+    transition: none;
+    padding: 0.45rem;
+  margin: 0 0.25rem;	
+    }
+    .button-box:hover {
+      color: var(--secondary-color);
+    }
+    .button-box:hover{
+      background-color: transparent;
+      border-radius: 0px;
+      transition: none;
+      padding: 0.45rem;
+    margin: 0 0.25rem;
+    border: transparent;	
+    }
+
+
+  }
   
