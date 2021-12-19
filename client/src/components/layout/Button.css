@@ -11,12 +11,12 @@
     color: #fff;
     cursor: pointer;
     background-color: var(--primary);
-    padding: 6px 18px;
+    padding: 8px 20px;
 
   }
   
   .button-box:hover {
-    padding: 6px 16px;
+    padding: 7px 18px;
     transition: all 0.3s ease-out;
     background-color: transparent;
     color: #fff;
@@ -31,7 +31,7 @@
     .button-box{
       text-align: center;
 		justify-content: center;
-		padding: 4px 16px;
+		padding: 6px 18px;
 		font-size: 14px;
     /* margin-bottom: 2px; */
     background-color: transparent;
