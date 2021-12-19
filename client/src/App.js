@@ -33,10 +33,12 @@ const App = () => {
 			<Router>
 				<Fragment>
 					<Navbar />
+					<div className="content-container">
 					<Switch>
 						<Route exact path='/' component={Landing} />
 						<Route component={Routes} />
-					</Switch>
+						</Switch>
+					</div>
 					<Footer />
 				</Fragment>
 			</Router>

@@ -1,9 +1,10 @@
 :root {
-	--primary-color: #23A4D6;
-	--dark-color: #293745;
+	/* --primary-color: #23A4D6;
+	--dark-color: #293745; */
 	/* #1888f */
 	--dark-color: #242222;
 	--primary-color: #23A4D6;
+	--secondary-color:#1888ff;
 	--light-color: #f4f4f4;
 	--danger-color: #dc3545;
 	--success-color: #28a745;
@@ -59,7 +60,10 @@ img {
 	line-height: 1.2;
 	margin-bottom: 1rem;
 }
-
+.lead-1{
+	font-size: 2.0rem;
+	margin-bottom: 1rem;
+}
 .lead {
 	font-size: 1.5rem;
 	margin-bottom: 1rem;
@@ -127,6 +131,11 @@ img {
 }
 .my-3 {
 	margin: 3rem 0;
+}
+
+/* colour styles */
+.secondary-color{
+	color: var(--secondary-color);
 }
 
 .btn {
@@ -239,11 +248,22 @@ img {
 	height: 100%;
 }
 
+.content-container {
+	min-height: calc(100vh - 200px);
+  }
+
+.footer-container{
+	position: relative;
+	left: 0;
+	bottom: 0;
+}
+
 /* Forms */
 
 .login-box{
 	max-width: 330px;
 	margin:auto;
+	
 }
 
 
@@ -260,6 +280,8 @@ img {
 	width: 100%;
 	margin-top: 20px;
 }
+
+
 
 
 .form input[type='text'],
@@ -282,13 +304,13 @@ img {
 	font-size: 20px;
 	padding: 8px 0;
 	margin: 8px 0;
-	border-bottom: 1px solid #1888ff;
+	border-bottom: 1px solid var(--secondary-color);
   }
   .textbox i{
 	width: 26px;
 	float: left;
 	text-align: center;
-	color: #1888ff;
+	color: var(--secondary-color);
   }
   .textbox input{
 	border: none;
@@ -305,9 +327,13 @@ img {
 	margin: 20px 0px;
   float: left;
   font-size: 40px;
-  border-bottom: 6px solid #1888ff;
+  border-bottom: 6px solid var(--secondary-color);
   margin-bottom: 50px;
   padding: 13px 0;
+}
+.head2{
+	font-size: 30px;
+	margin-bottom: 30px;
 }
 
 .form input[type='submit'],
@@ -399,7 +425,7 @@ button {
 }
 
 .nav-link a:hover{
-	background-color: #1888ff;
+	background-color: var(--secondary-color);
 	border-radius: 4px;
 	transition: all 0.2s ease-out;
 	padding: 8px 16px;	
@@ -439,6 +465,7 @@ button {
 
 /* Footer */
 footer{
+	/* margin-top:70px; */
     position: flex;
     bottom: 0;
     left: 0;
@@ -446,7 +473,7 @@ footer{
     background: var(--dark-color);
     height: auto;
     width: 100vw;
-    padding-top: 40px;
+    /* padding-top: 40px; */
     color: var(--light-color);
 }
 .footer-content{
@@ -464,9 +491,10 @@ footer{
 }
 .footer-content p{
     max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
+    /* margin: 10px auto; */
+    line-height: 30px;
+    font-size: 16px;
+	padding: 30px;
 }
 .socials{
     list-style: none;
@@ -685,7 +713,9 @@ footer{
 	.large {
 		font-size: 2rem;
 	}
-
+	.lead-1{
+		font-size:0.5rem;
+	}
 	.lead {
 		font-size: 1rem;
 	}

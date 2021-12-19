@@ -18,7 +18,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
 				<Fragment>
 					<h1 className='large text-primary'>Developers</h1>
 					<p className='lead'>
-						<i className='fab fa-connectdevelop'></i>
+					<i class="fas fa-globe"></i>
 						Browse and connect with Developers
 					</p>
 					<div className='profiles'>

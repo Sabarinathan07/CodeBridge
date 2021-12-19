@@ -30,34 +30,38 @@ const AddEducation = ({ addEducation, history }) => {
 
 	return (
 		<Fragment>
-			<h1 className='large text-primary'>Add Your Education</h1>
-			<p className='lead'>
+			<div className="login-box">
+			<h1 className='large text-primary heading head2'>Add Education</h1>
+			{/* <p className='lead'>
 				<i className='fas fa-graduation-cap'></i> Add any school, bootcamp, etc
 				that you have attended
-			</p>
-			<small>*required</small>
+			</p> */}
+			{/* <small>*required</small> */}
 			<form className='form' onSubmit={(e) => onSubmit(e)}>
-				<div className='form-group'>
+					<div className='form-group textbox'>
+					<i class="fas fa-school"></i>
 					<input
 						type='text'
-						placeholder='* School or Bootcamp'
+						placeholder='School or University'
 						name='school'
 						value={school}
 						onChange={(e) => onChange(e)}
 						required
 					/>
 				</div>
-				<div className='form-group'>
+					<div className='form-group textbox'>
+					<i class="fas fa-graduation-cap"></i>
 					<input
 						type='text'
-						placeholder='* Degree or Certificate'
+						placeholder='Degree or Qualification'
 						name='degree'
 						value={degree}
 						onChange={(e) => onChange(e)}
 						required
 					/>
 				</div>
-				<div className='form-group'>
+					<div className='form-group textbox'>
+					<i class="fas fa-user-graduate"></i>
 					<input
 						type='text'
 						placeholder='Field Of Study'
@@ -66,8 +70,9 @@ const AddEducation = ({ addEducation, history }) => {
 						onChange={(e) => onChange(e)}
 					/>
 				</div>
-				<div className='form-group'>
-					<h4>From Date</h4>
+				<div className='form-group textbox'>
+						<h4 className='secondary-color'>From Date</h4>
+						<i class="fas fa-calendar-minus"></i>
 					<input
 						type='date'
 						name='from'
@@ -91,8 +96,9 @@ const AddEducation = ({ addEducation, history }) => {
 						Current School
 					</p>
 				</div>
-				<div className='form-group'>
-					<h4>To Date</h4>
+				<div className='form-group textbox'>
+						<h4 className='secondary-color'>To Date</h4>
+						<i class="far fa-calendar-minus"></i>
 					<input
 						type='date'
 						name='to'
@@ -101,21 +107,22 @@ const AddEducation = ({ addEducation, history }) => {
 						disabled={toDateDisabled ? 'disabled' : ''}
 					/>
 				</div>
-				<div className='form-group'>
-					<textarea
+					<div className='form-group textbox'>
+					<i class='fab fa-discourse'></i>
+						<input
+							type='text'
 						name='description'
-						cols='30'
-						rows='5'
 						placeholder='Program Description'
 						value={description}
 						onChange={(e) => onChange(e)}
-					></textarea>
+					/>
 				</div>
 				<input type='submit' className='btn btn-primary my-1' />
 				<Link className='btn btn-light my-1' to='/dashboard'>
 					Go Back
 				</Link>
-			</form>
+				</form>
+				</div>
 		</Fragment>
 	);
 };
