@@ -43,11 +43,11 @@ Check in browser on [http://localhost:3000/](http://localhost:3000/)
 
 ## App Info
 
-### Author
+## Author
 
-## SABARINATHAN R
-## ASHWIN KUMAR JK
-## GANESH KUMAR R
+### SABARINATHAN R
+### ASHWIN KUMAR JK
+### GANESH KUMAR R
 
 
 
