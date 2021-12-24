@@ -20,7 +20,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 					<span className='hide-sm'>Dashboard</span>
 				</Link>
 			</li>
-			<li>
+			<li className='button-link'>
 				<Link className='button-box' onClick={logout} to='#!'>
 					<i className='fas fa-sign-out-alt'></i>{' '}
 					<span className='hide-sm'>Logout</span>
@@ -37,8 +37,10 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 			<li className='nav-link'>
 				<Link to='/register'>Register</Link>
 			</li>
-			<li >
-				<Link className='button-box'to='/login'>Login</Link>
+			<li className='button-link'>
+				<Link className='button-box' to='/login'>
+					Login
+				</Link>
 			</li>
 		</ul>
 	);
@@ -46,8 +48,8 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 	return (
 		<nav className='navbar bg-dark'>
 			<h1>
-				<Link to='/' className="navbar-logo">
-					<i className='fas fa-code'></i>&nbsp;HackNode
+				<Link to='/' className='navbar-logo'>
+					<i className='fas fa-code'></i>&nbsp;CodeBridge
 				</Link>
 			</h1>
 

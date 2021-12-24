@@ -11,16 +11,15 @@ const Landing = ({ isAuthenticated }) => {
 		<section className='landing'>
 			<div className='dark-overlay'>
 				<div className='landing-inner'>
-				<h1 className='x-large'>HackNode</h1>
+					<h1 className='x-large'>CodeBridge</h1>
 					{/* <p className='lead'>
 						Create your own Profile/Portfolio, share your own posts and likes or
 						comment other posts. And connect with everyone.
 					</p> */}
-					<p className="lead-1">
-						We Unite,&nbsp;We conquer!
-					</p>
-					<p className="lead">
-						A unique community to join hands with fellow developers who have similiar interests as You <br/> 
+					<p className='lead-1'>We Unite,&nbsp;We conquer!</p>
+					<p className='lead'>
+						A unique community to join hands with fellow developers who have
+						similiar interests as You <br />
 						Create your own Account and start Vibing!
 					</p>
 

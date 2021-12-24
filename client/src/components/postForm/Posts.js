@@ -17,7 +17,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
 		<Fragment>
 			<h1 className='large text-primary'>Posts</h1>
 			<p className='lead'>
-				Welcome to Hacknode community,&nbsp; have a good conversation!
+				Welcome to CodeBridge community,&nbsp; have a good conversation!
 			</p>
 			<PostForm />
 			<div className='posts'>
