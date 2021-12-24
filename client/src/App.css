@@ -431,7 +431,7 @@ button {
 .navbar ul {
 	display: flex;
 	display: grid;
-	grid-template-columns: repeat(3, auto);
+	grid-template-columns: repeat(4, auto);
 	grid-gap: 10px;
 	list-style: none;
 	text-align: center;
@@ -757,8 +757,7 @@ footer {
 		background-color: transparent;
 		border-radius: 0px;
 		transition: none;
-		border: transparent;
-	}
+		border: transparent;	}
 	/* .navbar li{
 		display: flex;
 		align-items: center;
