@@ -42,9 +42,10 @@ Check in browser on [http://localhost:3000/](http://localhost:3000/)
 
 ## Author
 
-SABARINATHAN R
+[SABARINATHAN R](https://github.com/Sabarinathan07)
+[SABARINATHAN R](https://github.com/Ash-Codename47)
+[Ganesh Kumar R](https://github.com/jeekay24)
 
-[Sabarinathan07](https://github.com/Sabarinathan07)
-
+---
 
 
