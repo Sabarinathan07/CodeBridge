@@ -42,8 +42,9 @@ Check in browser on [http://localhost:3000/](http://localhost:3000/)
 
 ## Author
 
-### SABARINATHAN R
-### ASHWIN KUMAR JK
-### GANESH KUMAR R
+SABARINATHAN R
+
+[Sabarinathan07](https://github.com/Sabarinathan07)
+
 
 
