@@ -40,8 +40,10 @@ Check in browser on [http://localhost:3000/](http://localhost:3000/)
 
 ## App Info
 
-### Author
+## Author
 
-SABARINATHAN R
+### SABARINATHAN R
+### ASHWIN KUMAR JK
+### GANESH KUMAR R
 
-[Sabarinathan07](https://github.com/Sabarinathan07)
+
