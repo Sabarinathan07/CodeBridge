@@ -1,13 +1,10 @@
-
-
 # Quick Start 🚀
 
 ### Clone App
 
-``` 
-git clone https://github.com/Sabarinathan07/HackNode.git
 ```
-
+git clone https://github.com/Sabarinathan07/CodeBridge.git
+```
 
 ### Add a default.json file in config folder with the following
 
@@ -48,5 +45,3 @@ Check in browser on [http://localhost:3000/](http://localhost:3000/)
 SABARINATHAN R
 
 [Sabarinathan07](https://github.com/Sabarinathan07)
-
-

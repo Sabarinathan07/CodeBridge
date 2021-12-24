@@ -16,7 +16,7 @@
   }
   
   .button-box:hover {
-    padding: 7px 18px;
+    padding: 8px 20px;
     transition: all 0.3s ease-out;
     background-color: transparent;
     color: #fff;
@@ -25,31 +25,28 @@
     /* transition: all 0.3s ease-out; */
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 900px) {
 
 
-    .button-box{
+    .button-box {
       text-align: center;
-		justify-content: center;
-		padding: 6px 18px;
-		font-size: 14px;
-    /* margin-bottom: 2px; */
-    background-color: transparent;
-    border-radius: 0px;
-    transition: none;
-    padding: 0.45rem;
-  margin: 0 0.25rem;	
+      justify-content: center;
+      display: relative;
+      background-color: var(--dark-color);
+      padding-bottom: 1rem;
+      width: 100vw;
+      font-size: 16px;
+      margin-bottom: 2px;
+      padding-bottom: 20px;
+
     }
-    .button-box:hover {
-      color: var(--secondary-color);
-    }
+    
     .button-box:hover{
+      color: var(--secondary-color);
       background-color: transparent;
       border-radius: 0px;
       transition: none;
-      padding: 0.45rem;
-    margin: 0 0.25rem;
-    border: transparent;	
+      border: transparent;
     }
 
 
