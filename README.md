@@ -3,8 +3,9 @@
 > A unique community to join hands with fellow developers who have similar interests as You
 
 <h1 align="center">
-<a href="https://code-bridge.herokuapp.com/">
-<img src="https://github.com/Sabarinathan07/CodeBridge/blob/master/Screenshots/ss1.png?raw=true" />
+<!- https://code-bridge.herokuapp.com ->
+<!a href="">
+<!img src="https://github.com/Sabarinathan07/CodeBridge/blob/master/Screenshots/ss1.png?raw=true" />
 </h1></a>
 
 ---
