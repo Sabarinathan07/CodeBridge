@@ -1,8 +1,22 @@
+# Ignore all .env files
+*.env
+/.env
+*.env/
+.env/
+
+# Ignore node_modules
 node_modules/
+
+# Ignore specific config files
 config/default1.json
 config/production.json
+
+# Ignore build and cache files
 client/build
 client/.eslintcache
+
+# Ignore macOS system files
 .DS_Store/
 client/src/components/.DS_Store
-.DS_Store
+
+# Duplicate entries removed

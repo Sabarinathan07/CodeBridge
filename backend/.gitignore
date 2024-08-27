@@ -1,6 +1,0 @@
-node_modules/
-client/build
-client/.eslintcache
-.DS_Store/
-client/src/components/.DS_Store
-.DS_Store
