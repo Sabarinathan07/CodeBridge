@@ -1,0 +1,33 @@
+services:
+  server:
+    image: sabarinathan07/codebridge-backend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    networks:
+      - app-network
+  mongo:
+    image: mongo
+    volumes:
+      - data-volume:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+  client:
+    image: sabarinathan07/codebridge-frontend
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge
+volumes:
+  data-volume:
+  node_modules:
+  web-root:
+    driver: local
