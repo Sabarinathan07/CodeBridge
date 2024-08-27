@@ -5,14 +5,14 @@
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
-        "server": "nodemon server",
+        "server": "nodemon index.js",
         "client": "npm start --prefix client",
         "dev": "concurrently \"npm run server\" \"npm run client\""
     },
     "author": "Sabari Nathan",
     "license": "MIT",
     "dependencies": {
-        "axios": "^0.21.1",
+        "axios": "^1.7.5",
         "bcryptjs": "^2.4.3",
         "cors": "^2.8.5",
         "dotenv": "^16.3.1",
