@@ -1,13 +1,12 @@
 const express = require("express");
-const router = express.Router();
 const gravatar = require("gravatar");
-
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { check, validationResult } = require("express-validator");
-const normalize = require("normalize-url");
+const normalizeUrl = require("normalize-url");
+const User = require("../../models/User.js");
 
-const User = require("../../models/User");
+const router = express.Router();
 
 // @route POST api/users
 // @description register
@@ -15,7 +14,7 @@ const User = require("../../models/User");
 router.post(
     "/",
     [
-        //express-validator
+        // express-validator
         check("name", "Name is required").not().isEmpty(),
         check("email", "Please enter a valid email").isEmail(),
         check(
@@ -23,7 +22,6 @@ router.post(
             "Enter a password of minimum of six characters"
         ).isLength({ min: 6 }),
     ],
-
     async (req, res) => {
         const errors = validationResult(req);
 
@@ -33,7 +31,7 @@ router.post(
 
         const { name, email, password } = req.body;
         try {
-            //to see if user's exist
+            // to see if user's exist
             let user = await User.findOne({ email });
 
             if (user) {
@@ -43,7 +41,7 @@ router.post(
             }
 
             // get user gravatar
-            const avatar = normalize(
+            const avatar = normalizeUrl(
                 gravatar.url(email, {
                     s: "200",
                     r: "pg",
@@ -51,9 +49,6 @@ router.post(
                 }),
                 { forceHttps: true }
             );
-            // const avatar = gravatar.url(req.body.email,
-            //     { s: '100', r: 'x', d: 'mm' },
-            //     true)
 
             user = new User({
                 name,
@@ -62,11 +57,9 @@ router.post(
                 password,
             });
 
-            //encrypt password
+            // encrypt password
             const salt = await bcrypt.genSalt(10);
-            console.log(salt);
             user.password = await bcrypt.hash(password, salt);
-            // console.log(user);
 
             await user.save();
 
@@ -100,4 +93,4 @@ router.post(
     }
 );
 
-module.exports = router;
+export default router;
