@@ -83,60 +83,71 @@ export const getGithubRepos = (userId) => async (dispatch) => {
 
 // Create or Update profile
 export const createProfile =
-	(FormData, history, edit = false) =>
-	async (dispatch) => {
-		try {
-			const res = await api.post('/profile', FormData);
+    (FormData, history, edit = false) =>
+    async (dispatch) => {
+        try {
+            const res = await api.post("/profile", FormData);
 
-			dispatch({
-				type: GET_PROFILE,
-				payload: res.data,
-			});
+            dispatch({
+                type: GET_PROFILE,
+                payload: res.data,
+            });
 
-			dispatch(
-				setAlert(edit ? 'Profile Updated' : 'Profile Created', 'success')
-			);
+            dispatch(
+                setAlert(
+                    edit ? "Profile Updated" : "Profile Created",
+                    "success"
+                )
+            );
 
-			if (!edit) {
-				history.push('/dashboard');
-			}
-		} catch (err) {
-			const errors = err.response.data.errors;
-			if (errors) {
-				errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
-			}
+            if (!edit) {
+                history.push("/dashboard");
+            }
+        } catch (err) {
+            const errors = err.response.data?.errors;
+            if (errors) {
+                errors.forEach((error) =>
+                    dispatch(setAlert(error.msg, "danger"))
+                );
+            }
 
-			dispatch({
-				type: PROFILE_ERROR,
-				payload: { msg: err.response.statusText, status: err.response.status },
-			});
-		}
-	};
+            dispatch({
+                type: PROFILE_ERROR,
+                payload: {
+                    msg: err.response.statusText,
+                    status: err.response.status,
+                },
+            });
+        }
+    };
 
 // Add Experience
 export const addExperience = (FormData, history) => async (dispatch) => {
-	try {
-		const res = await api.put('/profile/experience', FormData);
+    try {
+        const res = await api.put("/profile/experience", FormData);
 
-		dispatch({
-			type: UPDATE_PROFILE,
-			payload: res.data,
-		});
+        dispatch({
+            type: UPDATE_PROFILE,
+            payload: res.data,
+        });
 
-		dispatch(setAlert('Experience Added', 'success'));
+        dispatch(setAlert("Experience Added", "success"));
 
-		history.push('/dashboard');
-	} catch (err) {
-		const errors = err.response.data.errors;
-		if (errors) {
-			errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
-		}
+        history.push("/dashboard");
+    } catch (err) {
+        const errors = err.response.data?.errors;
+        if (errors) {
+            errors.forEach((error) => dispatch(setAlert(error.msg, "danger")));
+        }
 
-		dispatch({
-			type: PROFILE_ERROR,
-			payload: { msg: err.response.statusText, status: err.response.status },
-		});
-	}
+        dispatch({
+            type: PROFILE_ERROR,
+            payload: {
+                msg: err.response.statusText,
+                status: err.response.status,
+            },
+        });
+    }
 };
 
 // Add Education
@@ -153,7 +164,7 @@ export const addEducation = (FormData, history) => async (dispatch) => {
 
 		history.push('/dashboard');
 	} catch (err) {
-		const errors = err.response.data.errors;
+		const errors = err.response.data?.errors;
 		if (errors) {
 			errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
 		}

@@ -268,5 +268,6 @@ CreateProfile.propTypes = {
 const mapStateToProps = (state) => ({
     profile: state.profile,
 });
-
-export default connect(mapStateToProps, { createProfile, getCurrentProfile });
+export default connect(mapStateToProps, { createProfile, getCurrentProfile })(
+    CreateProfile
+);
