@@ -1,13 +1,17 @@
-const express = require('express');
-require("dotenv").config();
-const connectDB = require('./config/db');
-const path = require('path');
+import express from "express";
+import dotenv from "dotenv";
+import connectDB from "./config/db.js";
+import path from "path";
+import cors from "cors";
+
+// Initialize dotenv
+dotenv.config();
+
+// Initialize express app
 const app = express();
-const cors = require('cors');
 
-//connecting Database
+// Connecting Database
 connectDB();
-
 
 app.use(cors());
 // app.use((req, res, next) => {
@@ -23,24 +27,27 @@ app.use(cors());
 //     next();
 //   });
 
-//middleware
+// Middleware
 app.use(express.json({ extended: false }));
 
 // app.get('/', (req, res) => res.send('Api working!!'))
-app.get("/",(req,res) =>{
-    res.json("Hello World!")
-})
+app.get("/", (req, res) => {
+    res.json("Hello World!");
+});
 
-//define routes
-app.use('/api/auth', require('./routes/api/auth'));
-app.use('/api/users', require('./routes/api/users'));
-app.use('/api/posts', require('./routes/api/posts'));
-app.use('/api/profile', require('./routes/api/profile'));
+// Define routes
+import authRoutes from "./routes/api/auth.js";
+import userRoutes from "./routes/api/users.js";
+import postRoutes from "./routes/api/posts.js";
+import profileRoutes from "./routes/api/profile.js";
 
+app.use("/api/auth", authRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/posts", postRoutes);
+app.use("/api/profile", profileRoutes);
 
-
-app.get('/',(req,res) =>{
-	res.send("Hello!");
+app.get("/", (req, res) => {
+    res.send("Hello!");
 });
 
 const PORT = process.env.PORT || 5000;

@@ -1,13 +1,13 @@
-const jwt = require('jsonwebtoken');
+import jwt from "jsonwebtoken";
 
 //next is a callback
-const middleware =  (req, res, next)  => {
+const middleware = (req, res, next) => {
     //get token from header
-    const token = req.header('x-auth-token');
+    const token = req.header("x-auth-token");
 
     //check if there is no token
     if (!token) {
-        return res.status(401).json({ msg: 'No token, Authorization denied' });
+        return res.status(401).json({ msg: "No token, Authorization denied" });
     }
 
     // verify token
@@ -15,10 +15,9 @@ const middleware =  (req, res, next)  => {
         const decoded = jwt.verify(token, process.env.JWT_TOKEN);
         req.user = decoded.user;
         next();
-
     } catch (error) {
-        res.status(401).json({ msg: 'Token is not valid' });
-
+        res.status(401).json({ msg: "Token is not valid" });
     }
-}
-module.exports = middleware;
+};
+
+export default middleware;

@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "A complete BLOG website with create, edit and delete",
     "main": "index.js",
+    "type": "module",
     "scripts": {
         "start": "node index.js",
         "server": "nodemon index.js",
