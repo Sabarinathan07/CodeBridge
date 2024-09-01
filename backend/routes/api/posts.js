@@ -87,7 +87,7 @@ router.delete("/:id", auth, async (req, res) => {
             return res.status(401).json({ msg: "User not Authorized" });
         }
 
-        await post.remove();
+        await Post.findByIdAndDelete(req.params.id);
 
         res.json({ msg: "Post removed" });
     } catch (err) {
@@ -225,8 +225,8 @@ router.delete("/comment/:id/:comment_id", auth, async (req, res) => {
             .map((comment) => comment.id)
             .indexOf(req.params.comment_id);
 
-        if (removeIndex < 1) {
-            return res.status(404).json({ msg: "Comment doesn't exist" });
+        if (removeIndex < 0) {
+            return res.status(404).json({ msg: "Comment doesn't exist11" });
         }
         post.comments.splice(removeIndex, 1);
 
