@@ -20,6 +20,7 @@ const SwitchRoutes = (props) => {
         <section className="container">
             <Alert />
             <Routes>
+                <Route path="/" element={<></>} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/profiles" element={<Profiles />} />
