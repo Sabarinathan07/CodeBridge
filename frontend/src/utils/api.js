@@ -3,8 +3,8 @@ import store from '../store';
 import { LOGOUT } from '../actions/types';
 
 const api = axios.create({
-    // baseURL: 'https://codebridge-deploy-api.vercel.app/api',
-    baseURL: "http://localhost:5000/api",
+    baseURL: "https://code-bridge-nine.vercel.app/api",
+    // baseURL: "http://localhost:5000/api",
     headers: {
         "Content-Type": "application/json",
     },
