@@ -6,4 +6,3 @@ client/.eslintcache
 .DS_Store/
 client/src/components/.DS_Store
 .DS_Store
-backend/.env
