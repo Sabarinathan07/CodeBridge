@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
     res.json("Hello World!");
 });
 
-// import rout
+// import route
 import authRoutes from "./routes/api/auth.js";
 import userRoutes from "./routes/api/users.js";
 import postRoutes from "./routes/api/posts.js";
