@@ -41,6 +41,7 @@ import userRoutes from "./routes/api/users.js";
 import postRoutes from "./routes/api/posts.js";
 import profileRoutes from "./routes/api/profile.js";
 
+// Define routes
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
