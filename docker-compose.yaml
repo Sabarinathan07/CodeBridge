@@ -1,6 +1,8 @@
 services:
   server:
     image: sabarinathan07/codebridge-backend
+    env_file:
+      - .env
     ports:
       - "5000:5000"
     depends_on:
@@ -17,6 +19,8 @@ services:
       - app-network
   client:
     image: sabarinathan07/codebridge-frontend
+    env_file:
+      - .env
     depends_on:
       - server
     ports:
