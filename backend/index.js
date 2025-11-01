@@ -8,7 +8,7 @@ import userRoutes from "./routes/api/users.js";
 import postRoutes from "./routes/api/posts.js";
 import profileRoutes from "./routes/api/profile.js";
 
-// Initialize dotenv here
+// Initialize dotenv 
 dotenv.config();
 
 // Initialize express app
