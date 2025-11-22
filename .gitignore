@@ -18,5 +18,6 @@ client/.eslintcache
 # Ignore macOS system files
 .DS_Store/
 client/src/components/.DS_Store
+**/.DS_Store
 
 # Duplicate entries remove
