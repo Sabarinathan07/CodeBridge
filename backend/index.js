@@ -12,7 +12,7 @@ import profileRoutes from "./routes/api/profile.js";
 dotenv.config();
 
 // Initialize express app
-// const __dirname 
+// const __dirnam
 const app = express();
 
 // Connecting Database
