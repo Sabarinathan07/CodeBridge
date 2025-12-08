@@ -1,6 +1,6 @@
 # [CodeBridge](https://code-bridge.herokuapp.com/)
 
-> A unique community to join hands with fellow developers who have similar interests as You
+> A unique community to join hands with fellow developers who have similar interests as You!
 
 <h1 align="center">
 <!- https://code-bridge.herokuapp.com ->
