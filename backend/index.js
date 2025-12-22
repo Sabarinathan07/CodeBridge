@@ -31,7 +31,7 @@ app.use(cors());
 //     next();
 //   });
 
-// Middleware
+// Middleware is
 app.use(express.json({ extended: false }));
 
 // app.get('/', (req, res) => res.send('Api working!!'))
