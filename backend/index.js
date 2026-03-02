@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import path from "path";
 import cors from 'cors';
+import helmet from 'helmet';
+import rateLimit from 'express-rate-limit';
 import authRoutes from "./routes/api/auth.js";
 import userRoutes from "./routes/api/users.js";
 import postRoutes from "./routes/api/posts.js";
@@ -14,25 +16,40 @@ dotenv.config();
 // Initialize express app
 const app = express();
 
+// Security Middleware
+app.use(helmet()); // Sets various security headers
+app.disable('x-powered-by'); // Hide server information
+
+// Rate Limiting
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    limit: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
+    standardHeaders: 'draft-7', // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
+    legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+    message: {
+        status: 429,
+        msg: "Too many requests from this IP, please try again after 15 minutes"
+    }
+});
+
+// Apply rate limiting to all API routes
+app.use("/api", limiter);
+
+// CORS Configuration
+const corsOptions = {
+    origin: process.env.CLIENT_ORIGIN || "http://localhost:3000",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+    optionsSuccessStatus: 204
+};
+app.use(cors(corsOptions));
+
 // Connecting Database
 connectDB();
 
-app.use(cors());
-// app.use((req, res, next) => {
-//     res.setHeader('Access-Control-Allow-Credentials', true)
-//     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
-//     // another common pattern
-//     // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
-//     res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
-//     res.setHeader(
-//       'Access-Control-Allow-Headers','x-auth-token',
-//       'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
-//     )
-//     next();
-//   });
+// Body Parser Middleware
+app.use(express.json({ limit: '10kb', extended: false })); // Limit body size to prevent DoS
 
-// Middleware
-app.use(express.json({ extended: false }));
 
 // app.get('/', (req, res) => res.send('Api working!!'))
 app.get("/", (req, res) => {
