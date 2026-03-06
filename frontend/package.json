@@ -69,8 +69,9 @@
             "nanoid": "3.3.8",
             "webpack-dev-server": "5.2.1",
             "postcss": "8.4.49",
-            "http-proxy-middleware": "2.0.11",
+            "http-proxy-middleware": "2.0.9",
             "@babel/core": "7.26.10",
+
             "@babel/helpers": "7.26.10",
             "@babel/runtime": "7.26.10"
         }
