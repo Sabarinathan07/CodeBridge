@@ -44,7 +44,7 @@
         "overrides": {
             "rollup": "2.80.0",
             "form-data": "4.0.5",
-            "axios": "1.7.9",
+            "axios": "1.14.0",
             "webpack": "5.105.4",
             "node-forge": "1.4.0",
             "picomatch": "4.0.4",
@@ -76,8 +76,10 @@
             "minimatch": "9.0.8",
             "underscore": "1.13.8",
             "svgo": "2.8.2",
-            "immutable": "4.3.8"
+            "immutable": "4.3.8",
+            "@remix-run/router": "1.23.2"
         }
+
 
     }
 }
