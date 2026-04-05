@@ -23,7 +23,7 @@ router.get("/", auth, async (req, res) => {
 // @route POST api/auth
 // @description authenticate user and get token
 // @access Public
-// Validation with express-validato
+// Validation with express-validat
 router.post(
     "/",
     [
