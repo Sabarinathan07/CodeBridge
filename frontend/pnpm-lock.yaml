@@ -43,6 +43,10 @@ overrides:
   immutable: 4.3.8
   '@remix-run/router': 1.23.2
   glob: 10.5.0
+  lodash@>=4.0.0 <=4.17.23: '>=4.18.0'
+  lodash@<=4.17.23: '>=4.18.0'
+  follow-redirects@<=1.15.11: '>=1.16.0'
+  axios@>=1.0.0 <1.15.0: '>=1.15.0'
 
 importers:
 
@@ -52,8 +56,8 @@ importers:
         specifier: ^3.3.0
         version: 3.3.0(redux@5.0.1)
       axios:
-        specifier: 1.14.0
-        version: 1.14.0
+        specifier: '>=1.15.0'
+        version: 1.15.0
       eslint-webpack-plugin:
         specifier: ^4.2.0
         version: 4.2.0(eslint@8.57.0)(webpack@5.105.4)
@@ -1866,8 +1870,8 @@ packages:
     resolution: {integrity: sha512-Mr2ZakwQ7XUAjp7pAwQWRhhK8mQQ6JAaNWSjmjxil0R8BPioMtQsTLOolGYkji1rcL++3dCqZA3zWqpT+9Ew6g==}
     engines: {node: '>=4'}
 
-  axios@1.14.0:
-    resolution: {integrity: sha512-3Y8yrqLSwjuzpXuZ0oIYZ/XGgLwUIBU3uLvbcpb0pidD9ctpShJd43KSlEEkVQg6DS0G9NKyzOvBfUtDKEyHvQ==}
+  axios@1.15.0:
+    resolution: {integrity: sha512-wWyJDlAatxk30ZJer+GeCWS209sA42X+N5jU2jy6oHTp7ufw8uzUTVFBX9+wTfAlhiJXGS0Bq7X6efruWjuK9Q==}
 
   axobject-query@3.1.1:
     resolution: {integrity: sha512-goKlv8DZrK9hUh975fnHzhNIO4jUnFCfv/dszV5VwUGDFjI6vQ2VwoyjYjYNEbBE8AH87TduWP5uyDR1D+Iteg==}
@@ -2888,17 +2892,8 @@ packages:
   flatted@3.4.2:
     resolution: {integrity: sha512-PjDse7RzhcPkIJwy5t7KPWQSZ9cAbzQXcafsetQoD7sOJRQlGikNbx7yZp2OotDnJyrDcbyRq3Ttb18iYOqkxA==}
 
-  follow-redirects@1.15.11:
-    resolution: {integrity: sha512-deG2P0JfjrTxl50XGCDyfI97ZGVCxIpfKYmfyrQ54n5FO/0gfIES8C/Psl6kWVDolizcaaxZJnTS0QSMxvnsBQ==}
-    engines: {node: '>=4.0'}
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
-
-  follow-redirects@1.15.6:
-    resolution: {integrity: sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==}
+  follow-redirects@1.16.0:
+    resolution: {integrity: sha512-y5rN/uOsadFT/JfYwhxRS5R7Qce+g3zG97+JrtFZlC9klX/W5hD7iiLzScI4nZqUS7DNUdhPgw4xI8W2LuXlUw==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
@@ -3797,8 +3792,8 @@ packages:
   lodash.uniq@4.5.0:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
 
-  lodash@4.17.23:
-    resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
+  lodash@4.18.1:
+    resolution: {integrity: sha512-dMInicTPVE8d1e5otfwmmjlxkZoUpiVLwyeTdUsi/Caj/gfzzblBcCE5sRHV/AsjuCmxWrte2TNGSYuCeCq+0Q==}
 
   loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
@@ -8010,9 +8005,9 @@ snapshots:
 
   axe-core@4.10.0: {}
 
-  axios@1.14.0:
+  axios@1.15.0:
     dependencies:
-      follow-redirects: 1.15.11
+      follow-redirects: 1.16.0
       form-data: 4.0.5
       proxy-from-env: 2.1.0
     transitivePeerDependencies:
@@ -8937,7 +8932,7 @@ snapshots:
       '@babel/plugin-syntax-flow': 7.24.7(@babel/core@7.26.10)
       '@babel/plugin-transform-react-jsx': 7.25.2(@babel/core@7.26.10)
       eslint: 8.57.0
-      lodash: 4.17.23
+      lodash: 4.18.1
       string-natural-compare: 3.0.1
 
   eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.5))(eslint@8.57.0):
@@ -9286,9 +9281,7 @@ snapshots:
 
   flatted@3.4.2: {}
 
-  follow-redirects@1.15.11: {}
-
-  follow-redirects@1.15.6: {}
+  follow-redirects@1.16.0: {}
 
   for-each@0.3.3:
     dependencies:
@@ -9522,7 +9515,7 @@ snapshots:
     dependencies:
       '@types/html-minifier-terser': 6.1.0
       html-minifier-terser: 6.1.0
-      lodash: 4.17.23
+      lodash: 4.18.1
       pretty-error: 4.0.0
       tapable: 2.2.1
     optionalDependencies:
@@ -9577,7 +9570,7 @@ snapshots:
   http-proxy@1.18.1:
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.15.6
+      follow-redirects: 1.16.0
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
@@ -10428,7 +10421,7 @@ snapshots:
 
   lodash.uniq@4.5.0: {}
 
-  lodash@4.17.23: {}
+  lodash@4.18.1: {}
 
   loose-envify@1.4.0:
     dependencies:
@@ -11188,7 +11181,7 @@ snapshots:
 
   pretty-error@4.0.0:
     dependencies:
-      lodash: 4.17.23
+      lodash: 4.18.1
       renderkid: 3.0.0
 
   pretty-format@27.5.1:
@@ -11512,7 +11505,7 @@ snapshots:
       css-select: 4.3.0
       dom-converter: 0.2.0
       htmlparser2: 6.1.0
-      lodash: 4.17.23
+      lodash: 4.18.1
       strip-ansi: 6.0.1
 
   require-directory@2.1.1: {}
@@ -12430,7 +12423,7 @@ snapshots:
 
   whatwg-url@8.7.0:
     dependencies:
-      lodash: 4.17.23
+      lodash: 4.18.1
       tr46: 2.1.0
       webidl-conversions: 6.1.0
 
@@ -12506,7 +12499,7 @@ snapshots:
       fast-json-stable-stringify: 2.1.0
       fs-extra: 9.1.0
       glob: 10.5.0
-      lodash: 4.17.23
+      lodash: 4.18.1
       pretty-bytes: 5.6.0
       rollup: 2.80.0
       rollup-plugin-terser: 7.0.2(rollup@2.80.0)
