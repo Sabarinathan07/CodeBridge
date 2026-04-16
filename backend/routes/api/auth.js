@@ -23,7 +23,7 @@ router.get("/", auth, async (req, res) => {
 // @route POST api/auth
 // @description authenticate user and get token
 // @access Public
-// express-validator is used to validate the request body
+// express-validator is used to validate the request bod
 router.post(
     "/",
     [
